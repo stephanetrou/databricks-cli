@@ -1104,3 +1104,7 @@ class ReposService(object):
         _data = {}
     
         return self.client.perform_query('DELETE', '/repos/{id}'.format(id=id), data=_data, headers=headers)
+
+class PermissionsService(object):
+    def __init__(self, client):
+        self.client = client
